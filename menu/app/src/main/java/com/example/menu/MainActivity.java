@@ -3,6 +3,7 @@ package com.example.menu;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -11,7 +12,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,27 +23,14 @@ public class MainActivity extends AppCompatActivity {
     private int mCount;
     String tag = "LifeCycleEvents";
     ListView listView;
-    String items[] = {"1","2","3"};
+    String items[] = {"1 ","2","3"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        Button buttonDecrement = findViewById(R.id.button_decrement);
-//        Button buttonIncrement = findViewById(R.id.button_increment);
 
-//        buttonDecrement.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                decrement();
-//            }
-//        });
-//
-//        buttonIncrement.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                increment();
-//            }
-//        });
+
 
         listView = (ListView) findViewById(R.id.listView);
 
@@ -70,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item1:
                 openActivity2();
                 return true;
+            case R.id.item4:
+                savedataActivity();
             case R.id.item2:
                 openDialog();
                 return true;
@@ -135,6 +127,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openActivity2() {
         Intent intent = new Intent(this, activity2.class);
+        startActivity(intent);
+    }
+
+    public void savedataActivity() {
+        Intent intent = new Intent(this, savedata.class);
         startActivity(intent);
     }
 
