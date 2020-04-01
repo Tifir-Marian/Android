@@ -17,8 +17,6 @@ import java.io.InputStreamReader;
 public class savedata extends AppCompatActivity {
     private static final String FILE_NAME = "example.txt";
 
-    // does not work
-
     EditText mEditText;
 
     @Override

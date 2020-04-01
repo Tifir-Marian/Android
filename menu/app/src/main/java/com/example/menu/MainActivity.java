@@ -52,7 +52,10 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-
+    public void openDialog() {
+        Ex exampleDialog = new Ex();
+        exampleDialog.show(getSupportFragmentManager(), "example dialog");
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -62,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.item4:
                 savedataActivity();
+            case R.id.item5:
+                sensorActivity();
+            case R.id.item6:
+                gpsActivity();
             case R.id.item2:
                 openDialog();
                 return true;
@@ -79,11 +86,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-    public void openDialog() {
-        Ex exampleDialog = new Ex();
-        exampleDialog.show(getSupportFragmentManager(), "example dialog");
-    }
 
     public void onStart()
     {
@@ -132,6 +134,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void savedataActivity() {
         Intent intent = new Intent(this, savedata.class);
+        startActivity(intent);
+    }
+    public void sensorActivity() {
+        Intent intent = new Intent(this, Sensors.class);
+        startActivity(intent);
+    }
+
+    public void gpsActivity() {
+        Intent intent = new Intent(this, GPS.class);
         startActivity(intent);
     }
 

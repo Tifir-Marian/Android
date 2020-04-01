@@ -11,6 +11,14 @@ xmlns:app="http://schemas.android.com/apk/res-auto">
         android:id="@+id/item4"
         android:title="Save Data"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/item5"
+        android:title="Sensors"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/item6"
+        android:title="GPS"
+        app:showAsAction="never" />
 
 <item
     android:id="@+id/item2"
