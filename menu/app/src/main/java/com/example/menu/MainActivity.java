@@ -69,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
                 sensorActivity();
             case R.id.item6:
                 gpsActivity();
+            case R.id.item7:
+                cameraActivity();
             case R.id.item2:
                 openDialog();
                 return true;
@@ -145,6 +147,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, GPS.class);
         startActivity(intent);
     }
+    public void cameraActivity() {
+        Intent intent = new Intent(this, Camera.class);
+        startActivity(intent);
+    }
+
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {

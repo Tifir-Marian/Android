@@ -19,6 +19,10 @@ xmlns:app="http://schemas.android.com/apk/res-auto">
         android:id="@+id/item6"
         android:title="GPS"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/item7"
+        android:title="Camera"
+        app:showAsAction="never" />
 
 <item
     android:id="@+id/item2"
